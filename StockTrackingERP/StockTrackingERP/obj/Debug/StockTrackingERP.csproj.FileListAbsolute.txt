@@ -1,0 +1,159 @@
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe.config
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.pdb
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csprojResolveAssemblyReference.cache
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Giris.resources
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Properties.Resources.resources
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.GenerateResource.Cache
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.exe
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.pdb
+c:\users\sezgin.karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Anasayfa.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.SistemYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.KullanıcıEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelKodBilgileri.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UlkeEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlceEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunTipEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.StokYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketEkleGuncelle.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunlerList.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaYonetimi.resources
+C:\Users\Sezgin.Karagulle\documents\visual studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaOlustur.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe.config
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.exe
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.pdb
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.pdb
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Anasayfa.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaOlustur.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelKodBilgileri.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Giris.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.KullanıcıEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.SistemYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.StokYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UlkeEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunlerList.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunTipEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunYonetimi.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlceEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlEkleGuncelle.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Properties.Resources.resources
+C:\Users\Administrator\Desktop\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Anasayfa.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaOlustur.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelKodBilgileri.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Giris.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.KullanıcıEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusterilerList.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.SistemYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.StokYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UlkeEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunlerList.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunTipEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunYonetimi.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlceEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlEkleGuncelle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunEkle.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunList.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe.config
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.exe
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.pdb
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.pdb
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csprojResolveAssemblyReference.cache
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Anasayfa.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaOlustur.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunEkle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunList.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelKodBilgileri.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Giris.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.KullanıcıEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusterilerList.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.SistemYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.StokYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UlkeEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunlerList.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunTipEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunYonetimi.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlceEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlEkleGuncelle.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Properties.Resources.resources
+C:\Users\Berivan\Documents\Visual Studio 2015\Projects\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.GenerateResource.Cache
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe.config
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.exe
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\bin\Debug\StockTrackingERP.pdb
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csprojAssemblyReference.cache
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Anasayfa.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.DepoYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaOlustur.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunEkle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaUrunList.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.FaturaYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelKodBilgileri.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Giris.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.HareketYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.KullanıcıEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusterilerList.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MusteriYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.SistemYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.StokYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UlkeEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunlerList.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunTipEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.UrunYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlceEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.İlEkleGuncelle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.Properties.Resources.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.GenerateResource.cache
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.csproj.CoreCompileInputs.cache
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.exe
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.pdb
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.CariHesapYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.CariHesapFisEkle.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.GenelMuhasebeYonetimi.resources
+C:\Users\ByGenius\source\repos\StockTrackingERP\StockTrackingERP\obj\Debug\StockTrackingERP.MuhasebeFisEkle.resources

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16, 16.875" name="L_StockTrackingERP">
+  <DataContextMoniker Name="/L_StockTrackingERPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="52b60f0a-14b8-4289-9e5d-d8f89c12b143" absoluteBounds="6.75, 2.375, 3.5, 1.1939925130208335">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f26e392-3db6-45c4-9bbe-96a594010a78" absoluteBounds="6.765, 2.835, 3.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c8fbe03-f414-4a1e-8bc7-7ef4aba444dc" absoluteBounds="1.5, 11.625, 3.5, 2.7324039713541666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0e8c0fa-39f3-4841-9c03-c5392d19941a" absoluteBounds="1.515, 12.085, 3.4699999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ae1ea29-8779-49d8-91aa-f071afe7a654" absoluteBounds="12.25, 3.5, 3.5, 1.5785953776041666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/District" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db1cd92b-a3c5-486e-abe7-9f0d70921e1f" absoluteBounds="12.265, 3.96, 3.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ba020d9-fa50-4fe9-9bf7-e6bc5d0bc020" absoluteBounds="8.875, 7.125, 3.5, 1.1939925130208344">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/InvoicesCounter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9d3add0-8103-48a7-a735-e00d0a7d4e8c" absoluteBounds="8.89, 7.5850000000000009, 3.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98b68917-a452-4456-84cb-f3696f529065" absoluteBounds="0.75, 4.25, 3.5, 1.3862939453125005">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f3ffdb6-359e-42e0-8ac2-1605974414a6" absoluteBounds="0.765, 4.71, 3.4699999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71455a77-cba0-4bb0-af02-a72578fc6562" absoluteBounds="9.75, 0.75, 3.5, 1.1939925130208335">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/ProductType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dd95709-620e-495e-98e2-c3f4a72afd32" absoluteBounds="9.765, 1.21, 3.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bce6dc5c-95d1-4e40-816c-4c40d04bd36a" absoluteBounds="9.5, 4.5, 3.5, 1.5785953776041666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0598e150-9be4-46c4-8558-c8a466df59d1" absoluteBounds="9.515, 4.96, 3.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17bf3675-2920-46ae-965c-fcbc840d79c2" absoluteBounds="6.75, 9.75, 3.5, 1.1939925130208344">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/StockActionCounter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06e7e1de-d502-44af-9cb6-72ad14859916" absoluteBounds="6.765, 10.21, 3.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="979d7ac1-6cee-4679-b680-dc36b9be7cb2" absoluteBounds="3.5, 4.25, 3.5, 1.3862939453125005">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/StockActionDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0059024f-be49-4421-9ec1-30e4f5e7fd6e" absoluteBounds="3.515, 4.71, 3.4699999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1ecd8b1-3c63-45b4-9f30-dd92f3373b4b" absoluteBounds="3.5, 15.25, 3.5, 1.3862939453125005">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/StockAction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99678d27-1999-45ab-b87f-131e59c8f79a" absoluteBounds="3.515, 15.71, 3.4699999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a19882a9-384d-4984-8740-9e8616ebe648" absoluteBounds="3.5, 1.25, 3.5, 1.5785953776041666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Stock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f99c025-176e-4127-b809-9043013bf94f" absoluteBounds="3.515, 1.71, 3.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7481fe25-b458-4f65-b16b-97cae6e5b7a9" absoluteBounds="0.75, 1.25, 3.5, 1.3862939453125003">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Store" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66feb3c8-956e-48d4-a4bf-6ac648243510" absoluteBounds="0.765, 1.71, 3.4699999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15d9a7bc-05d6-4cc0-adfd-fce1fa13e720" absoluteBounds="12.125, 7.625, 1.75, 1.9631982421874996">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20608dbf-dab0-4c5f-b283-b6b0135e9c7f" absoluteBounds="12.14, 8.085, 1.7200000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.25 : 2.9374995); (14 : 2.9374995); (14 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Country/Country_District" />
+      <nodes>
+        <classShapeMoniker Id="52b60f0a-14b8-4289-9e5d-d8f89c12b143" />
+        <classShapeMoniker Id="3ae1ea29-8779-49d8-91aa-f071afe7a654" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 6.07859537760417); (11.25 : 6.32859537760417); (14 : 6.32859537760417); (14 : 5.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Province/Province_District" />
+      <nodes>
+        <classShapeMoniker Id="bce6dc5c-95d1-4e40-816c-4c40d04bd36a" />
+        <classShapeMoniker Id="3ae1ea29-8779-49d8-91aa-f071afe7a654" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.875 : 3.56899251302083); (9.875 : 4.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Country/Country_Province" />
+      <nodes>
+        <classShapeMoniker Id="52b60f0a-14b8-4289-9e5d-d8f89c12b143" />
+        <classShapeMoniker Id="bce6dc5c-95d1-4e40-816c-4c40d04bd36a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 5.15429020432692); (0.5625 : 5.15429020432692); (0.5625 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Product/Product_StockActionDetail" />
+      <nodes>
+        <classShapeMoniker Id="98b68917-a452-4456-84cb-f3696f529065" />
+        <classShapeMoniker Id="979d7ac1-6cee-4679-b680-dc36b9be7cb2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 4.94314697265625); (0.5 : 4.94314697265625); (0.5 : 4); (5.375 : 4); (5.375 : 3.20359537760417); (5.9375 : 3.20359537760417); (5.9375 : 2.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Product/Product_Stock" />
+      <nodes>
+        <classShapeMoniker Id="98b68917-a452-4456-84cb-f3696f529065" />
+        <classShapeMoniker Id="a19882a9-384d-4984-8740-9e8616ebe648" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 1.94314697265625); (0.375 : 1.94314697265625); (0.375 : 15.9431469726563); (3.5 : 15.9431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Store/Store_StockAction" />
+      <nodes>
+        <classShapeMoniker Id="7481fe25-b458-4f65-b16b-97cae6e5b7a9" />
+        <classShapeMoniker Id="e1ecd8b1-3c63-45b4-9f30-dd92f3373b4b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.25); (2.5 : 1); (5.25 : 1); (5.25 : 1.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Store/Store_Stock" />
+      <nodes>
+        <classShapeMoniker Id="7481fe25-b458-4f65-b16b-97cae6e5b7a9" />
+        <classShapeMoniker Id="a19882a9-384d-4984-8740-9e8616ebe648" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aa329efb-6b5b-4584-8c20-2e66d1de44d1" absoluteBounds="6.375, 11.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/StocksList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="548440f4-339c-46e4-b99b-fd4a8b35576d" absoluteBounds="6.39, 12.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56e74450-c758-4215-ac8e-0a5350dd736a" absoluteBounds="9.375, 11.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/v_District" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4e52914-2a7b-4456-879c-c46e5403ec37" absoluteBounds="9.39, 12.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d79deec-924c-462e-b0ff-bf958e805799" absoluteBounds="12.375, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/v_Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="747d592f-96c1-4886-9d15-46cbbdb49f11" absoluteBounds="12.39, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe5fa6d2-35a1-4936-9173-c8fc48bbec20" absoluteBounds="5.625, 8.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/InvoicesDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bb316a4-5e99-4bef-9094-6eef21900a36" absoluteBounds="5.64, 8.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.09375 : 5.6362939453125); (1.09375 : 11.4046541341146); (2.79166666666667 : 11.4046541341146 : JumpStart); (2.95833333333333 : 11.4046541341146 : JumpEnd); (5.625 : 11.4046541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Product/Product_InvoicesDetail" />
+      <nodes>
+        <classShapeMoniker Id="98b68917-a452-4456-84cb-f3696f529065" />
+        <classShapeMoniker Id="fe5fa6d2-35a1-4936-9173-c8fc48bbec20" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 2.32097245898438); (0.458333333333333 : 2.32097245898437 : JumpStart); (0.291666666666667 : 2.32097245898438 : JumpEnd); (0.25 : 2.32097245898438); (0.25 : 7.625); (0.291666666666667 : 7.625 : JumpStart); (0.458333333333333 : 7.625 : JumpEnd); (1.01041666666667 : 7.625 : JumpStart); (1.17708333333333 : 7.625 : JumpEnd); (6.625 : 7.625); (6.625 : 8.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Store/Store_InvoicesDetail" />
+      <nodes>
+        <classShapeMoniker Id="7481fe25-b458-4f65-b16b-97cae6e5b7a9" />
+        <classShapeMoniker Id="fe5fa6d2-35a1-4936-9173-c8fc48bbec20" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="64eeb74d-834b-42f8-beb0-b7e30479fd51" absoluteBounds="1.875, 7.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1175a4c-9fb7-4338-a020-3b3415c171bb" absoluteBounds="1.8900000000000001, 8.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 11.625); (2.875 : 11.1843082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Customer/Customer_Invoice" />
+      <nodes>
+        <classShapeMoniker Id="4c8fbe03-f414-4a1e-8bc7-7ef4aba444dc" />
+        <classShapeMoniker Id="64eeb74d-834b-42f8-beb0-b7e30479fd51" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d16f5b77-4bc5-4ca2-8411-0f731d417499" absoluteBounds="0.875, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/CurrentReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ba93b96-50fe-4637-8d49-cdfea3f874ab" absoluteBounds="0.89000000000000012, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 11.625); (3.25 : 11.4968082682292); (2.95833333333333 : 11.4968082682292 : JumpStart); (2.79166666666667 : 11.4968082682292 : JumpEnd); (0.458333333333333 : 11.4968082682292 : JumpStart); (0.291666666666667 : 11.4968082682292 : JumpEnd); (0.125 : 11.4968082682292); (0.125 : 3.25405060677083); (0.166666666666667 : 3.25405060677083 : JumpStart); (0.458333333333333 : 3.25405060677083 : JumpEnd); (0.875 : 3.25405060677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L_StockTrackingERPDataContext/Customer/Customer_CurrentReceipt" />
+      <nodes>
+        <classShapeMoniker Id="4c8fbe03-f414-4a1e-8bc7-7ef4aba444dc" />
+        <classShapeMoniker Id="d16f5b77-4bc5-4ca2-8411-0f731d417499" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a69d5300-674d-4482-895d-71f6d59a90f7" absoluteBounds="3.125, 0.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/L_StockTrackingERPDataContext/AccountingReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0de05c12-80ed-4925-b6b1-de70ce3c01a2" absoluteBounds="3.14, 1.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

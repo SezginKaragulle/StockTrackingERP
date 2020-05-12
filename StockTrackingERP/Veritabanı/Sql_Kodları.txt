@@ -1,0 +1,136 @@
+ALTER PROC [dbo].[p_CurrecntTopReceivableDebit](@vr_CustomerID int,@vr_ReceivableDebit nvarchar(max))
+AS
+IF @vr_ReceivableDebit = 'Alacak' BEGIN
+DECLARE @vrReceivable decimal
+SET @vrReceivable = (select SUM(TLAmount) from CurrentReceipts Where CustomerNo = @vr_CustomerID And ReceivableDebit ='Alacak')
+RETURN @vrReceivable
+END
+ELSE IF @vr_ReceivableDebit = 'Borç' BEGIN
+DECLARE @vrDebit decimal
+SET @vrDebit = (select SUM(TLAmount) from CurrentReceipts Where CustomerNo = @vr_CustomerID And ReceivableDebit ='Borç')
+RETURN @vrDebit
+END
+
+
+
+ALTER PROC [dbo].[p_CurrentReceiptsSearchList](@vr_ReceiptDate1 date , @vr_ReceiptDate2 date,@vr_ReceiptNo nvarchar(max),@vr_CustomerID nvarchar(max),@vr_CurrentReceiptNo int)
+AS
+IF @vr_ReceiptNo='' And @vr_CurrentReceiptNo =0 BEGIN
+SELECT CurrentReceipts.ReceiptNo,CurrentReceipts.ReceiptDate,CurrentReceipts.ReceiptType,CurrentReceipts.DocumentNo,CurrentReceipts.DocumentDate,CurrentReceipts.TotalAmount,CurrentReceipts.ReceiptExchange,CurrentReceipts.TLAmount,CurrentReceipts.Explanation,CurrentReceipts.AccountingReceipt,CurrentReceipts.ApplicationCode,CurrentReceipts.ReceivableDebit
+FROM CurrentReceipts
+JOIN Customers on CurrentReceipts.CustomerNo = Customers.CustomerID
+WHERE CurrentReceipts.ReceiptDate Between @vr_ReceiptDate1 And @vr_ReceiptDate2 And CurrentReceipts.CustomerNo LIKE '%'+@vr_CustomerID+'%'
+END
+ELSE IF @vr_ReceiptNo<>'' BEGIN
+SELECT CurrentReceipts.ReceiptNo,CurrentReceipts.ReceiptDate,CurrentReceipts.ReceiptType,CurrentReceipts.DocumentNo,CurrentReceipts.DocumentDate,CurrentReceipts.TotalAmount,CurrentReceipts.ReceiptExchange,CurrentReceipts.TLAmount,CurrentReceipts.Explanation,CurrentReceipts.AccountingReceipt,CurrentReceipts.ApplicationCode,CurrentReceipts.ReceivableDebit
+FROM CurrentReceipts
+JOIN Customers on CurrentReceipts.CustomerNo = Customers.CustomerID
+WHERE CurrentReceipts.ReceiptDate Between @vr_ReceiptDate1 And @vr_ReceiptDate2 And CurrentReceipts.CustomerNo LIKE '%'+@vr_CustomerID+'%' and CurrentReceipts.ReceiptNo LIKE '%'+@vr_ReceiptNo+'%'
+END
+ELSE IF @vr_CurrentReceiptNo = 1 BEGIN
+SELECT CurrentReceipts.ReceiptNo,CurrentReceipts.ReceiptDate,CurrentReceipts.ReceiptType,CurrentReceipts.DocumentNo,CurrentReceipts.DocumentDate,CurrentReceipts.TotalAmount,CurrentReceipts.ReceiptExchange,CurrentReceipts.TLAmount,CurrentReceipts.Explanation,CurrentReceipts.AccountingReceipt,CurrentReceipts.ApplicationCode,CurrentReceipts.ReceivableDebit
+FROM CurrentReceipts
+JOIN Customers on CurrentReceipts.CustomerNo = Customers.CustomerID
+WHERE CurrentReceipts.ReceiptDate Between @vr_ReceiptDate1 And @vr_ReceiptDate2 And CurrentReceipts.CustomerNo LIKE '%'+@vr_CustomerID+'%' and CurrentReceipts.ReceivableDebit='Alacak'
+END
+ELSE IF @vr_CurrentReceiptNo = 2 BEGIN
+SELECT CurrentReceipts.ReceiptNo,CurrentReceipts.ReceiptDate,CurrentReceipts.ReceiptType,CurrentReceipts.DocumentNo,CurrentReceipts.DocumentDate,CurrentReceipts.TotalAmount,CurrentReceipts.ReceiptExchange,CurrentReceipts.TLAmount,CurrentReceipts.Explanation,CurrentReceipts.AccountingReceipt,CurrentReceipts.ApplicationCode,CurrentReceipts.ReceivableDebit
+FROM CurrentReceipts
+JOIN Customers on CurrentReceipts.CustomerNo = Customers.CustomerID
+WHERE CurrentReceipts.ReceiptDate Between @vr_ReceiptDate1 And @vr_ReceiptDate2 And CurrentReceipts.CustomerNo LIKE '%'+@vr_CustomerID+'%' And CurrentReceipts.ReceivableDebit = 'Borç'
+END
+
+
+ALTER PROC [dbo].[p_ProductAdd](@vrProductName nvarchar(max),@vrProductType nvarchar(max))
+AS
+BEGIN
+INSERT INTO Products (ProductName,ProductType) VALUES (@vrProductName,@vrProductType)
+END
+
+
+ALTER PROC [dbo].[p_ProductDel](@vr_ProductCode int)
+AS
+BEGIN
+DELETE FROM Products WHERE ProductCode = @vr_ProductCode
+END
+
+
+ALTER PROC [dbo].[p_ProductSearch](@vrProductCode nvarchar(max),@vrProductName nvarchar(max))
+AS
+SET NOCOUNT ON
+BEGIN
+IF(@vrProductCode <> '')
+SELECT * FROM Products Where ProductCode LIKE '%'+@vrProductCode+'%'
+ELSE IF(@vrProductName <>'')
+SELECT * FROM Products Where ProductName LIKE '%'+@vrProductName+'%'
+END
+
+
+ALTER PROC [dbo].[p_ProductCountSum] (@vrProductCode int,@vrStoreID int)
+AS
+BEGIN
+SELECT SUM(ProductCount) FROM Stocks WHERE ProductCode = @vrProductCode and StoreID = @vrStoreID
+END
+
+ALTER PROC [dbo].[p_InvoicesSearchList](@vr_InvoiceDate1 date , @vr_InvoiceDate2 date,@vr_InvoiceNo nvarchar(max),@vr_CustomerID nvarchar(max),@vr_CustomerName nvarchar(max),@vr_CurrentReceiptNo int,@vr_AccountingReceiptNo int)
+AS
+IF @vr_InvoiceNo='' And @vr_CustomerID = '' And @vr_CustomerName = '' And @vr_CurrentReceiptNo =0 And @vr_AccountingReceiptNo =0 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2
+END
+ELSE IF @vr_InvoiceNo <>''BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.InvoiceNo LIKE '%'+@vr_InvoiceNo+'%'
+END
+ELSE IF @vr_CustomerID <> '' BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.CustomerID LIKE '%'+@vr_CustomerID+'%'
+END
+ELSE IF @vr_CustomerName <> '' BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Customers.Title LIKE '%'+ @vr_CustomerName+'%' 
+END
+ELSE IF @vr_CurrentReceiptNo = 1 And @vr_AccountingReceiptNo =0 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.CurrentReceiptNo >0
+END
+ELSE IF @vr_CurrentReceiptNo = 0 And @vr_AccountingReceiptNo = 1 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.AccountingReceiptNo > 0
+END
+ELSE IF @vr_CurrentReceiptNo = 1 And @vr_AccountingReceiptNo = 1 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.CurrentReceiptNo > 0 And Invoices.AccountingReceiptNo > 0
+END
+ELSE IF @vr_CurrentReceiptNo = 2 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.CurrentReceiptNo = 0
+END
+ELSE IF @vr_AccountingReceiptNo = 2 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.AccountingReceiptNo < 0
+END
+ELSE IF @vr_CurrentReceiptNo = 2 And @vr_AccountingReceiptNo = 2 BEGIN
+SELECT Invoices.InvoiceNo,Invoices.InvoiceDate,Invoices.CustomerID,Customers.Title,Invoices.TotalAmount,Invoices.InvoiceExchange,Invoices.TotalAmountNoVat,Invoices.VatAmout,Invoices.DiscountAmount,Invoices.TLAmount,Invoices.PaymentDay,Invoices.DueDate,Invoices.CurrentReceiptNo,Invoices.AccountingReceiptNo
+FROM Invoices
+JOIN Customers on Invoices.CustomerID = Customers.CustomerID
+WHERE Invoices.InvoiceDate Between @vr_InvoiceDate1 And @vr_InvoiceDate2 And Invoices.CurrentReceiptNo = 0 And Invoices.AccountingReceiptNo = 0
+END

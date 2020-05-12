@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StockTrackingERP" Class="L_StockTrackingERPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-F0UVJRM;Initial Catalog=StockTrackingERP;Integrated Security=True" SettingsObjectName="StockTrackingERP.Properties.Settings" SettingsPropertyName="StockTrackingERPConnectionString4" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Countries" Member="Countries">
+    <Type Name="Country">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Country_District" Member="Districts" ThisKey="CountryID" OtherKey="CountryID" Type="District" />
+      <Association Name="Country_Province" Member="Provinces" ThisKey="CountryID" OtherKey="CountryID" Type="Province" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TaxAdministration" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TaxNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Customer_Invoice" Member="Invoices" ThisKey="CustomerID" OtherKey="CustomerID" Type="Invoice" />
+      <Association Name="Customer_CurrentReceipt" Member="CurrentReceipts" ThisKey="CustomerID" OtherKey="CustomerNo" Type="CurrentReceipt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Districts" Member="Districts">
+    <Type Name="District">
+      <Column Name="DistrictID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Country_District" Member="Country" ThisKey="CountryID" OtherKey="CountryID" Type="Country" IsForeignKey="true" />
+      <Association Name="Province_District" Member="Province" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="Province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoicesCounter" Member="InvoicesCounters">
+    <Type Name="InvoicesCounter">
+      <Column Name="CountersID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountersNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Product_StockActionDetail" Member="StockActionDetails" ThisKey="ProductCode" OtherKey="ProductCode" Type="StockActionDetail" />
+      <Association Name="Product_Stock" Member="Stocks" ThisKey="ProductCode" OtherKey="ProductCode" Type="Stock" />
+      <Association Name="Product_InvoicesDetail" Member="InvoicesDetails" ThisKey="ProductCode" OtherKey="ProductCode" Type="InvoicesDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductTypes" Member="ProductTypes">
+    <Type Name="ProductType">
+      <Column Name="ProductTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductType" Member="ProductType1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Provinces" Member="Provinces">
+    <Type Name="Province">
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProvinceCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Province_District" Member="Districts" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="District" />
+      <Association Name="Country_Province" Member="Country" ThisKey="CountryID" OtherKey="CountryID" Type="Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockActionCounter" Member="StockActionCounters">
+    <Type Name="StockActionCounter">
+      <Column Name="StockActionCounter" Member="StockActionCounter1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActionCounter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockActionDetails" Member="StockActionDetails">
+    <Type Name="StockActionDetail">
+      <Column Name="StockAction" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_StockActionDetail" Member="Product" ThisKey="ProductCode" OtherKey="ProductCode" Type="Product" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockActions" Member="StockActions">
+    <Type Name="StockAction">
+      <Column Name="StockAction" Member="StockAction1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WaybillNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Store_StockAction" Member="Store" ThisKey="StoreID" OtherKey="StoreID" Type="Store" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stocks" Member="Stocks">
+    <Type Name="Stock">
+      <Column Name="StockID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_Stock" Member="Product" ThisKey="ProductCode" OtherKey="ProductCode" Type="Product" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Store_Stock" Member="Store" ThisKey="StoreID" OtherKey="StoreID" Type="Store" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stores" Member="Stores">
+    <Type Name="Store">
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Store_StockAction" Member="StockActions" ThisKey="StoreID" OtherKey="StoreID" Type="StockAction" />
+      <Association Name="Store_Stock" Member="Stocks" ThisKey="StoreID" OtherKey="StoreID" Type="Stock" />
+      <Association Name="Store_InvoicesDetail" Member="InvoicesDetails" ThisKey="StoreID" OtherKey="StoreID" Type="InvoicesDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameSurName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StocksList" Member="StocksLists">
+    <Type Name="StocksList">
+      <Column Name="StockID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_Districts" Member="v_Districts">
+    <Type Name="v_District">
+      <Column Name="DistrictID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_Provinces" Member="v_Provinces">
+    <Type Name="v_Province">
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoicesDetails" Member="InvoicesDetails">
+    <Type Name="InvoicesDetail">
+      <Column Name="InvoiceDetailsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductTopAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductExchange" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ProductTotalAmountNoVat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductVatRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductVatAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductDiscountRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductDiscountAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductTLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExchangeRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Product_InvoicesDetail" Member="Product" ThisKey="ProductCode" OtherKey="ProductCode" Type="Product" IsForeignKey="true" />
+      <Association Name="Store_InvoicesDetail" Member="Store" ThisKey="StoreID" OtherKey="StoreID" Type="Store" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Invoices" Member="Invoices">
+    <Type Name="Invoice">
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="InvoiceExchange" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TotalAmountNoVat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VatAmout" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PaymentDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CurrentReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountingReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerID" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurrentReceipts" Member="CurrentReceipts">
+    <Type Name="CurrentReceipt">
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceiptDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReceiptType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CustomerNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ReceiptExchange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AccountingReceipt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReceivableDebit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Customer_CurrentReceipt" Member="Customer" ThisKey="CustomerNo" OtherKey="CustomerID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountingReceipts" Member="AccountingReceipts">
+    <Type Name="AccountingReceipt">
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceiptDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReceiptType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DocumentNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ReceiptExchange" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApplicationCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReceivableDebit" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.p_CustomerSearch" Method="p_CustomerSearch">
+    <Parameter Name="vrCustomerID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrCustomerTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrTaxNumber" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_CustomerSearchResult">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TaxAdministration" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TaxNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_CustomerSearch2" Method="p_CustomerSearch2">
+    <Parameter Name="vrCustomerID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrCustomerTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_CustomerSearch2Result">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TaxAdministration" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TaxNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_CustomerSearchAction" Method="p_CustomerSearchAction">
+    <Parameter Name="vr_CustomerID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_CustomerSearchActionResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_GeneralCodeInformationSearch" Method="p_GeneralCodeInformationSearch">
+    <Parameter Name="vrSearchName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGeneralCodeID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGenelCodeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_GeneralCodeInformationSearchResult">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_GeneralCodeInformationSearch2" Method="p_GeneralCodeInformationSearch2">
+    <Parameter Name="vrGeneralCodeID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGenelCodeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_GeneralCodeInformationSearch2Result">
+      <Column Name="DistrictID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_GeneralCodeInformationSearch3" Method="p_GeneralCodeInformationSearch3">
+    <Parameter Name="vrGeneralCodeID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGenelCodeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_GeneralCodeInformationSearch3Result">
+      <Column Name="ProductTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_InvoicesNextCount" Method="p_InvoicesNextCount">
+    <Parameter Name="vrCountersID" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_InvoicesNextCountResult">
+      <Column Name="CountersNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductAdd" Method="p_ProductAdd">
+    <Parameter Name="vrProductName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrProductType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_ProductCountSum" Method="p_ProductCountSum">
+    <Parameter Name="vrProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrStoreID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_ProductCountSumResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductDel" Method="p_ProductDel">
+    <Parameter Name="vr_ProductCode" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_ProductSearch" Method="p_ProductSearch">
+    <Parameter Name="vrProductCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrProductName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_ProductSearchResult">
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductSearchAction" Method="p_ProductSearchAction">
+    <Parameter Name="vr_ProductCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_ProductSearchActionResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductSearchAction2" Method="p_ProductSearchAction2">
+    <Parameter Name="vr_ProductCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_ProductSearchAction2Result">
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductStockCountControl" Method="p_ProductStockCountControl">
+    <Parameter Name="vr_ProductCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_ProductStockCountControlResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_ProductUpdate" Method="p_ProductUpdate">
+    <Parameter Name="vrProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrProductName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrProductType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StockDetailsDelete" Method="p_StockDetailsDelete">
+    <Parameter Name="vrStockAction" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StocksAdd" Method="p_StocksAdd">
+    <Parameter Name="vrProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrStoreID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrProductCount" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StocksAddUpdate" Method="p_StocksAddUpdate">
+    <Parameter Name="vrProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrStoreID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrProductCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrProductChangeStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StoreAdd" Method="p_StoreAdd">
+    <Parameter Name="vrStoreCode" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="vrStoreName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StoreDelete" Method="p_StoreDelete">
+    <Parameter Name="vrStoreID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_StoreSearch" Method="p_StoreSearch">
+    <Parameter Name="vrStoreID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrStoreName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_StoreSearchResult">
+      <Column Name="StoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_StoreStockCountControl" Method="p_StoreStockCountControl">
+    <Parameter Name="vr_StoreID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_StoreStockCountControlResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_StoreUpdate" Method="p_StoreUpdate">
+    <Parameter Name="vrStoreID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vrStoreCode" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="vrStoreName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_Users" Method="p_Users">
+    <Parameter Name="vrUserCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrUserPassword" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_UsersResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_UserSearch" Method="p_UserSearch">
+    <Parameter Name="vrUserCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrNameSurName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="p_UserSearchResult">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameSurName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_UsersList" Method="p_UsersList">
+    <ElementType Name="p_UsersListResult">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NameSurName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StockActionDetailList" Method="StockActionDetailList">
+    <Parameter Name="vr_StockAction" Type="System.Int32" DbType="Int" />
+    <ElementType Name="StockActionDetailListResult">
+      <Column Name="StockAction" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StockActionNo" Method="StockActionNo">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.StockList" Method="StockList">
+    <Parameter Name="vr_StoreName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="StockListResult">
+      <Column Name="StockID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StockListSearch" Method="StockListSearch">
+    <Parameter Name="vr_StockID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_ProductCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_ProductName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="StockListSearchResult">
+      <Column Name="StockID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StockProductProc" Method="StockProductProc">
+    <Parameter Name="vr_ProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vr_StoreID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="StockProductProcResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StoreDel" Method="StoreDel">
+    <Parameter Name="vr_StoreID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TestProc" Method="TestProc">
+    <Parameter Name="vr_ProductCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vr_StoreID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TestProcResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.v_GeneralCodeInformationSearch" Method="v_GeneralCodeInformationSearch">
+    <Parameter Name="vrSearchName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGeneralCodeID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vrGenelCodeName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="v_GeneralCodeInformationSearchResult">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_InvoicesDetailsList" Method="p_InvoicesDetailsList">
+    <Parameter Name="vr_InvoiceNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_InvoicesDetailsListResult">
+      <Column Name="InvoiceDetailsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProductCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductTopAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductExchange" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ProductTotalAmountNoVat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductVatRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductVatAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductDiscountRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductDiscountAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductTLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="StoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ExchangeRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_InvoicesSearchList" Method="p_InvoicesSearchList">
+    <Parameter Name="vr_InvoiceDate1" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_InvoiceDate2" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_InvoiceNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_CustomerID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_CustomerName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_CurrentReceiptNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vr_AccountingReceiptNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_InvoicesSearchListResult">
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="InvoiceExchange" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TotalAmountNoVat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VatAmout" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PaymentDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CurrentReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountingReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_InvoicesList" Method="p_InvoicesList">
+    <Parameter Name="vr_InvoiceDate1" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_InvoiceDate2" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="p_InvoicesListResult">
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="InvoiceExchange" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TotalAmountNoVat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VatAmout" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PaymentDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CurrentReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountingReceiptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_CurrentReceiptsSearchList" Method="p_CurrentReceiptsSearchList">
+    <Parameter Name="vr_ReceiptDate1" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_ReceiptDate2" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_ReceiptNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_CustomerID" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_CurrentReceiptNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_CurrentReceiptsSearchListResult">
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReceiptType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DocumentNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ReceiptExchange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AccountingReceipt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReceivableDebit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_CurrentAccountingNo" Method="p_CurrentAccountingNo">
+    <Parameter Name="vr_CustomerID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vr_CurrentAccountingStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.p_AccountingReceiptsSearchList" Method="p_AccountingReceiptsSearchList">
+    <Parameter Name="vr_ReceiptDate1" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_ReceiptDate2" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="vr_ReceiptNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="vr_AccountingReceiptNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_AccountingReceiptsSearchListResult">
+      <Column Name="ReceiptNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ReceiptType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DocumentNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ReceiptExchange" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TLAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Explanation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApplicationCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReceivableDebit" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_CurrentTopReceivableDebit" Method="p_CurrentTopReceivableDebit">
+    <Parameter Name="vr_CustomerID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vr_ReceivableDebit" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
